@@ -5,7 +5,7 @@
   background: #EEEBD0;
   border-radius: 1%;
   box-shadow: 5px 5px 2px #888888;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 body {
@@ -140,4 +140,17 @@ body {
 
 footer {
   text-align: center;
+}
+
+.contact-info{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 5px;
+}
+.contact-info img{
+  width : 23px;
+  margin-right: 2px;
 }
