@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+	<title>CodePen - FCC Pomodoro Clock using React</title>
+	<description>Feed created by FiveFilters.org</description>
+	<link>https://www.timato.co.kr/</link>
+	<generator>Feed Creator</generator>
+	<atom:link rel="self" href="http://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fwww.timato.co.kr%2F&amp;max=5&amp;order=document&amp;guid=0" />
+	<atom:link rel="related" title="Edit feed with Feed Creator" href="http://createfeed.fivefilters.org/index.php?url=https%3A%2F%2Fwww.timato.co.kr%2F&amp;max=5&amp;order=document&amp;guid=0"/>
+</channel>
+</rss>
