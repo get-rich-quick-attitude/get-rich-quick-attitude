@@ -1,0 +1,32 @@
+body {
+  background-color: #01abaa;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+#timerbox {
+  width: 700px;
+  height: 450px;
+  background: #eeebd0;
+  border-radius: 1%;
+  box-shadow: 5px 5px 2px #888888;
+}
+
+.header {
+  position: fixed;
+  height: 80px;
+  width: 95%;
+  background-color: #888888;
+  top: 0px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
+  padding: 10px 50px 0 50px;
+}
