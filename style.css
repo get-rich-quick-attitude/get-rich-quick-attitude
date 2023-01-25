@@ -1,155 +1,99 @@
-#root {
-  width: 500px;
-  height: 330px;
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  background-color: #2A2A2A;
+}
+
+
+#setSession{
+  height: 20em;
+  width: 20em;
   margin: auto;
-  background: #EEEBD0;
-  border-radius: 1%;
-  box-shadow: 5px 5px 2px #888888;
-  /* margin-top: 80px; */
+  border-radius: 50%;
+  border: 3px #FFFFFF solid;
+  position: relative;
+  overflow: hidden;
+  background-color: #a0f94c;
 }
 
-body {
-  background: #01ABAA;
-  color: #3A3335;
-  font-family: VT323;
-  font-weight: bold;
+#backdrop{
+  height: 100%;
+  width: 100%;
+  background-color: #2A2A2A;
+  position: absolute;
+  z-index: 1;
 }
 
-
-.pomodoro {
-  height: 120px;
-  display: flex;
-  background: #FEDC3D;
-  justify-content: center;
-  box-shadow: 1px 1px 1px #888888;
+#begin, #reset{
+  font-size: 2em;
+  background-color: #2A2A2A; 
 }
 
 
-.pomodoro button {
-  padding: 5px 10px 5px 10px;
-  margin-top: 90%;
-  border: none;
-  background: #01ABAA;
-  font-size: 45px;
-  font-family: VT323;
-  font-weight: bold;
-  text-align: center;
-  box-shadow: 3px 3px 2px #888888;
+#clock, #timerName{
+  color: white;
+  z-index: 2;
+  font-size: 2.25em;
+  position: relative;
+  text-shadow: 0 0 2px black;
 }
 
-.pomodoro button:active {
-  background: #079fb0; 
-  box-shadow: 0 0 0 transparent;
+#clock{
+  transform: translateY(150%);
 }
 
-.pomodoro button:focus {
-  outline:0;
+#timerName{
+  transform: translateY(180%);
 }
 
-.title {
-  text-align: center;
-  font-size: 20px;
+#credit{
+  color: white;
+  font-size: 0.75em;
+  height: 100px;
+  bottom: 0; 
 }
 
-.pomodoro .timer {
-  font-size: 120px;
-  margin: 0 20px;
+#timer{
+  padding-bottom: 175px;
 }
 
-.start-pause {
-  display: flex;
-  justify-content: center;
+
+h1{
+  font-size: 3.25em;
 }
 
-.start-pause button {
-  border: none;
-  background: #01ABAA;
-  font-size: 45px;
-  font-family: VT323;
-  font-weight: bold;
-  margin: 30px;
-  box-shadow: 3px 3px 2px #888888;
+h2{
+  font-size: 1.75em;
 }
 
-.start-pause button:active {
-   background: #079fb0; 
-  box-shadow: 0 0 0 transparent;
+h1, h2, h3, h6{
+  color: white;
+  font-family: 'Audiowide', cursive;
 }
 
-.start-pause button:focus {
-  outline: 0;
+span, button{
+  color: white;
+  font-size: 1.5em;
 }
 
-.reset {
-  text-align: center;
+a:link, a:visited, a:hover, a:active{
+  color: white;
 }
 
-.reset button {
-  border: none;
-  background: #DC5754;
-  font-size: 45px;
-  font-family: VT323;
-  font-weight: bold;
-  box-shadow: 3px 3px 2px #888888;
-  margin-left: 115px;
+.hide-me{
+  display: none;
 }
 
-.reset button:active {
-  box-shadow: 0 0 0 transparent;
+.add-sub{
+  color: white;
+  font-size: 1.75em;
 }
 
-.reset button:focus {
-  outline: 0;
+.adjustTime{
+  display: inline-block;
+  padding: 1em;
 }
 
-.contain-it {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.break-length {
-  margin-left: 30px;
-}
-
-.break-time {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  font-size: 15px;
-}
-
-.break-time button {
-  border: none;
-  background: #DC5754;
-  box-shadow: 1px 1px 1px #888888;
-}
-
-.break-time button:active {
-  box-shadow: 0 0 0 transparent;
-}
-
-.break-time button:focus {
-  outline: 0;
-}
-
-.break-text {
-  font-size: 20px;
-  padding: 5px;
-}
-
-footer {
-  text-align: center;
-}
-
-.contact-info{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 5px;
-}
-.contact-info svg{
-  margin-right: 2px;
-}
