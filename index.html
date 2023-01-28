@@ -1,40 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <title>Ppomodoro Timer</title>
-  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <meta charset="UTF-8">
+  <title>15 minute timer</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
   <meta name="google-site-verification" content="f29BIMcu8W3rzpQxs5y99n_FxeUCQuLAPyKi-h_MgV8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="./style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5756511754180672"
-      crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
+
+  <meta name = "descriptions" content="15 minute timer"/>
+  <meta name = "keywords" content="15 minute timer, 5 minute timer, timer 10 minutes, set a timer for 10 minutes, set timer for 10 minutes, set timer for 5 minutes"/>
+
+  <!--추후 메타 태그 작업 시 진행-->
+  <!-- <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+  <meta property="og:url" content="">
+  <meta property="og:description" content=""> -->
+
 </head>
 <body>
-<!-- partial:index.partial.html -->>
-<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-<div class="contact-info">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-heart" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.76 2.76 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124c.146.277.329.556.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442c.22-.28.403-.56.55-.836L15 11.105V5.383l-3.002 1.801a2.76 2.76 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1H2Zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
-  </svg>
-  <h2> timato@timato.co.kr</h2>
-</div>
-<div id="root">
+<!-- partial:index.partial.html -->
+<html lang="en">
+
+<head>
+  <title>15 minute timer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div id="main" class="container">
+    <h1 class="text-center">15 minute timer</h1>
+    <div class="text-center">
+      <div class="adjustTime">
+        <h6>Break Length</h6>
+        <a href="#" id="restDown" class="add-sub">-</a>
+        <span id="restTime"></span>
+        <a href="#" id="restUp" class="add-sub">+</a>
+      </div>
+
+      <div class="adjustTime">
+        <h6>Session Length</h6>
+        <a href="#" id="pomDown" class="add-sub">-</a>
+        <span id="pomTime"></span>
+        <a href="#" id="pomUp" class="add-sub">+</a>
+      </div>
+    </div>
+
+    <div id="setSession" class="text-center">
+      <div id="backdrop"></div>
+      <p id="clock" class=""></p>
+      <p id="timerName">Session</p>
+    </div>
+
+    <div id="timer" class="text-center">
+      <button id="begin" class="btn btn-lg"><i class="fa fa-play-circle fa-lg" aria-hidden="true"></i></button>
+      <span></span>
+      <button id="reset" class="hide-me btn btn-lg"><i class="fa fa-stop" aria-hidden="true"></i></button>
+      <br>
+      <a href="#" class="playSound"><i id="sound" class="fa fa-volume-off" aria-hidden="true"></i></a>
+    </div>
+    <div class="text-center" >
+      <h6 style="text-decoration: underline;">contact : timato@timato.co.kr</h6>
+    </div>
+    <div id="credit" class="text-center"><p>Pen by <a href="https://codepen.io/s-coleman/">Steven Coleman</a></p>Audio by <a href="http://www.orangefreesounds.com/short-ringtone-for-notification/">Alexander</a> and <a href="https://kahimyang.com/resources/sound/click.mp3">The Kahimyang Project</a></div>
     
-</div>
+  </div>
+</body>
+
+</html>
 
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js'></script><script  src="./script.js"></script>
 
 </body>
-<footer>
-<br>
-<br>
-<br>
-The MIT License (MIT)
-
-Copyright (c) 2022 Douglas Luce (https://codepen.io/douglasluce/pen/MmEjrG)
-</footer>
 </html>
