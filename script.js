@@ -156,4 +156,18 @@ $(document).ready(function() {
       }
     }
   }
+  function checkUrl(){
+    var current = location.search;
+    if(current.includes('30')){
+      pomTime = 1800;
+      remainingTime = pomTime;
+    }
+  }
+  checkUrl();
+
+  // Display the current times for the pomodoro clock and time adjusters on page load.
+  $("#restTime").html(timeConversion(restTime));
+  $("#pomTime").html(timeConversion(pomTime));
+  $("#clock").html(timeConversion(remainingTime - count));
+  $(".time-duration").html(timeConversion(pomTime).substring(0,timeConversion(pomTime).length-3));
 });
