@@ -2,9 +2,9 @@ $(document).ready(function() {
   var count = 0; //Variable to keep track of each passing second
   var total; // Total background color to show (total)
   var countdown; // Used to begin the countdown interval
-  var pomTime = 900; // Default session length in seconds
+  var pomTime = 1500; // Default session length in seconds
   var restTime = 300; // Default rest/break length in seconds
-  var remainingTime = 900; // A variable used to set the countdown interval. Changes between pomTime and restTime
+  var remainingTime = 1500; // A variable used to set the countdown interval. Changes between pomTime and restTime
   var timeToRest = false; // Used as a means to determine if it is a time to rest or not
 
   // Ticking audio source: https://kahimyang.com/resources/sound/click.mp3
