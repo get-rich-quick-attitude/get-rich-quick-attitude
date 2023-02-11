@@ -24,10 +24,13 @@ $(document).ready(function() {
   alarmSound.preLoad = true;
 
   // Display the current times for the pomodoro clock and time adjusters on page load.
+
+  timerSetting();
+  $("#timerTitle span").html(timeConversion(pomTime).substring(0,2));
   $("#restTime").html(timeConversion(restTime));
   $("#pomTime").html(timeConversion(pomTime));
   $("#clock").html(timeConversion(remainingTime - count));
-
+  
   // On clicking the element with this class the ticking sound will muted or unmuted.
   // An icon showcasing this change will appear on-screen
   $(".playSound").click(function() {
@@ -45,9 +48,9 @@ $(document).ready(function() {
   // Change the number seconds to minutes and seconds that are two digits in length
   // Source that helped with string format: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
   function timeConversion(t) {
-     var mins = ("00" + (Math.floor(t / 60)).toString()).substr(-2);
-     var secs = ("00" + (t % 60).toString()).substr(-2);
-     return mins + ":" + secs;
+      var mins = ("00" + (Math.floor(t / 60)).toString()).substr(-2);
+      var secs = ("00" + (t % 60).toString()).substr(-2);
+      return mins + ":" + secs;
   }
 
   // This function is called when a session or break period has finished.
@@ -154,6 +157,14 @@ $(document).ready(function() {
         remainingTime = restTime;
         timeToRest = true;
       }
+    }
+  }
+  // timer setting for entry
+  function timerSetting(){
+    if(location.search.length != 0){
+      var timerParam = location.search.substring(1)
+        pomTime = timerParam * 60;
+        remainingTime = timerParam * 60;
     }
   }
 });

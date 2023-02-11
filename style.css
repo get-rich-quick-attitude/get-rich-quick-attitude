@@ -97,3 +97,9 @@ a:link, a:visited, a:hover, a:active{
   padding: 1em;
 }
 
+.timerPreset{
+  color: white; 
+  display: grid;
+  float: left;
+  width: 33%;
+}
