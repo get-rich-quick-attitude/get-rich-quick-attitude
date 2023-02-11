@@ -163,6 +163,9 @@ $(document).ready(function() {
   function timerSetting(){
     if(location.search.length != 0){
       var timerParam = location.search.substring(1)
+        if(timerParam >60){
+          timerParam  = 60
+        }
         pomTime = timerParam * 60;
         remainingTime = timerParam * 60;
     }
