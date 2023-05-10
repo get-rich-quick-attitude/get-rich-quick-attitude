@@ -1,105 +1,125 @@
-html{
-  height: 100%;
+html {
+    height: 100%;
 }
 
-body{
-  min-height: 100%;
-  background-color: #2A2A2A;
+body {
+    min-height: 100%;
+    background-color: #2a2a2a;
 }
 
-
-#setSession{
-  height: 20em;
-  width: 20em;
-  margin: auto;
-  border-radius: 50%;
-  border: 3px #FFFFFF solid;
-  position: relative;
-  overflow: hidden;
-  background-color: #a0f94c;
+#setSession {
+    height: 20em;
+    width: 20em;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px #ffffff solid;
+    position: relative;
+    overflow: hidden;
+    background-color: #a0f94c;
 }
 
-#backdrop{
-  height: 100%;
-  width: 100%;
-  background-color: #2A2A2A;
-  position: absolute;
-  z-index: 1;
+#backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: #2a2a2a;
+    position: absolute;
+    z-index: 1;
 }
 
-#begin, #reset{
-  font-size: 2em;
-  background-color: #2A2A2A; 
+#begin,
+#reset {
+    font-size: 2em;
+    background-color: #2a2a2a;
 }
 
-
-#clock, #timerName{
-  color: white;
-  z-index: 2;
-  font-size: 2.25em;
-  position: relative;
-  text-shadow: 0 0 2px black;
+#clock,
+#timerName {
+    color: white;
+    z-index: 2;
+    font-size: 2.25em;
+    position: relative;
+    text-shadow: 0 0 2px black;
 }
 
-#clock{
-  transform: translateY(150%);
+#clock {
+    transform: translateY(150%);
 }
 
-#timerName{
-  transform: translateY(180%);
+#timerName {
+    transform: translateY(180%);
 }
 
-#credit{
-  color: white;
-  font-size: 0.75em;
-  height: 100px;
-  bottom: 0; 
+#credit {
+    color: white;
+    font-size: 0.75em;
+    height: 100px;
+    bottom: 0;
 }
 
-#timer{
-  padding-bottom: 175px;
+#timer {
+    padding-bottom: 175px;
 }
 
-
-h1{
-  font-size: 3.25em;
+h1 {
+    font-size: 3.25em;
 }
 
-h2{
-  font-size: 1.75em;
+h2 {
+    font-size: 1.75em;
 }
 
-h1, h2, h3, h6{
-  color: white;
-  font-family: 'Audiowide', cursive;
+h1,
+h2,
+h3,
+h6 {
+    color: white;
+    font-family: 'Audiowide', cursive;
 }
 
-span, button{
-  color: white;
-  font-size: 1.5em;
+span,
+button {
+    color: white;
+    font-size: 1.5em;
 }
 
-a:link, a:visited, a:hover, a:active{
-  color: white;
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white;
 }
 
-.hide-me{
-  display: none;
+.hide-me {
+    display: none;
 }
 
-.add-sub{
-  color: white;
-  font-size: 1.75em;
+.add-sub {
+    color: white;
+    font-size: 1.75em;
 }
 
-.adjustTime{
-  display: inline-block;
-  padding: 1em;
+.adjustTime {
+    display: inline-block;
+    padding: 1em;
 }
 
-.timerPreset{
-  color: white; 
-  display: grid;
-  float: left;
-  width: 33%;
+.timerPreset {
+    color: white;
+    display: grid;
+    float: left;
+    width: 33%;
+}
+
+/* 소셜 공유 */
+.sns {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#naverband {
+    width: 40px;
+    height: 40px;
 }

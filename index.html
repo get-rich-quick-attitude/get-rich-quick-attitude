@@ -1,169 +1,240 @@
 <!DOCTYPE html>
 <html lang="kr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>간편한 타이머</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <meta
-      name="google-site-verification"
-      content="f29BIMcu8W3rzpQxs5y99n_FxeUCQuLAPyKi-h_MgV8"
-    />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5756511754180672"
-      crossorigin="anonymous"
-    ></script>
+    <head>
+        <meta charset="UTF-8" />
+        <title>간편한 타이머</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <meta
+            name="google-site-verification"
+            content="f29BIMcu8W3rzpQxs5y99n_FxeUCQuLAPyKi-h_MgV8"
+        />
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5756511754180672"
+            crossorigin="anonymous"
+        ></script>
 
-    <meta
-      name="descriptions"
-      content="간편하게 원하는 시간만큼 설정할 수 있는 타이머 사이트, 타이머"
-    />
-    <meta
-      name="keywords"
-      content="타이머 프로그램, 스톱워치 타이머, 타이머 사이트, 공부 타이머, 타이머 앱"
-    />
+        <!-- 카카오 api  -->
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
-    <meta property="og:title" content="간편한 타이머" />
-    <meta property="og:site_name" content="간편한 타이머" />
-    <!--추후 메타 태그 작업 시 진행-->
-    <!--<meta property="og:image" content="">
+        <meta
+            name="descriptions"
+            content="간편하게 원하는 시간만큼 설정할 수 있는 타이머 사이트, 타이머"
+        />
+        <meta
+            name="keywords"
+            content="타이머 프로그램, 스톱워치 타이머, 타이머 사이트, 공부 타이머, 타이머 앱"
+        />
+
+        <meta property="og:title" content="간편한 타이머" />
+        <meta property="og:site_name" content="간편한 타이머" />
+        <!--추후 메타 태그 작업 시 진행-->
+        <!--<meta property="og:image" content="">
   <meta property="og:image:width" content="">
   <meta property="og:image:height" content="">
   <meta property="og:url" content="">
   <meta property="og:type" content="">-->
-    <meta
-      property="og:description"
-      content="간편하게 원하는 시간만큼 설정할 수 있는 타이머 사이트, 타이머"
-    />
-    <!-- 네이버 -->
-    <meta
-      name="naver-site-verification"
-      content="6e07aa83cf6d891caf702ff55af28c69686db414"
-    />
-  </head>
-  <body>
-    <!-- partial:index.partial.html -->
-    <html lang="kr">
-      <head>
-        <title>간편한 타이머</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width = device-width, initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Audiowide"
-          rel="stylesheet"
+        <meta
+            property="og:description"
+            content="간편하게 원하는 시간만큼 설정할 수 있는 타이머 사이트, 타이머"
         />
-        <link
-          rel="stylesheet"
-          href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        <!-- 네이버 -->
+        <meta
+            name="naver-site-verification"
+            content="6e07aa83cf6d891caf702ff55af28c69686db414"
         />
-      </head>
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <html lang="kr">
+            <head>
+                <title>간편한 타이머</title>
+                <meta charset="utf-8" />
+                <meta
+                    name="viewport"
+                    content="width = device-width, initial-scale=1"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Audiowide"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="stylesheet"
+                    href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+                />
+            </head>
 
-      <body>
-        <div id="main" class="container">
-          <h1 id="timerTitle" class="text-center">
-            <span></span> minute timer
-          </h1>
-          <div class="text-center">
-            <div class="adjustTime">
-              <h6>Break Length</h6>
-              <a href="#" id="restDown" class="add-sub">-</a>
-              <span id="restTime"></span>
-              <a href="#" id="restUp" class="add-sub">+</a>
-            </div>
+            <body>
+                <div id="main" class="container">
+                    <h1 id="timerTitle" class="text-center">
+                        <span></span> minute timer
+                    </h1>
+                    <div class="text-center">
+                        <div class="adjustTime">
+                            <h6>Break Length</h6>
+                            <a href="#" id="restDown" class="add-sub">-</a>
+                            <span id="restTime"></span>
+                            <a href="#" id="restUp" class="add-sub">+</a>
+                        </div>
 
-            <div class="adjustTime">
-              <h6>Session Length</h6>
-              <a href="#" id="pomDown" class="add-sub">-</a>
-              <span id="pomTime"></span>
-              <a href="#" id="pomUp" class="add-sub">+</a>
-            </div>
-          </div>
+                        <div class="adjustTime">
+                            <h6>Session Length</h6>
+                            <a href="#" id="pomDown" class="add-sub">-</a>
+                            <span id="pomTime"></span>
+                            <a href="#" id="pomUp" class="add-sub">+</a>
+                        </div>
+                    </div>
 
-          <div id="setSession" class="text-center">
-            <div id="backdrop"></div>
-            <p id="clock" class=""></p>
-            <p id="timerName">Session</p>
-          </div>
+                    <div id="setSession" class="text-center">
+                        <div id="backdrop"></div>
+                        <p id="clock" class=""></p>
+                        <p id="timerName">Session</p>
+                    </div>
 
-          <div id="timer" class="text-center">
-            <button id="begin" class="btn btn-lg">
-              <i class="fa fa-play-circle fa-lg" aria-hidden="true"></i>
-            </button>
-            <span></span>
-            <button id="reset" class="hide-me btn btn-lg">
-              <i class="fa fa-stop" aria-hidden="true"></i>
-            </button>
-            <br />
-            <a href="#" class="playSound"
-              ><i id="sound" class="fa fa-volume-off" aria-hidden="true"></i
-            ></a>
+                    <div id="timer" class="text-center">
+                        <button id="begin" class="btn btn-lg">
+                            <i
+                                class="fa fa-play-circle fa-lg"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+                        <span></span>
+                        <button id="reset" class="hide-me btn btn-lg">
+                            <i class="fa fa-stop" aria-hidden="true"></i>
+                        </button>
+                        <br />
+                        <a href="#" class="playSound"
+                            ><i
+                                id="sound"
+                                class="fa fa-volume-off"
+                                aria-hidden="true"
+                            ></i
+                        ></a>
 
-            <div class="text-center" style="color: white">
-              온라인 타이머: 시간 관리를 위한 편리한 도구 오늘날의 급변하는
-              세상에서 시간 관리는 일상 생활의 중요한 측면입니다. 온라인
-              타이머는 시간을 관리하는 편리하고 효율적인 방법으로, 사용자들은
-              온라인 타이머를 이용하여, 근무 시간을 관리하거나, 공부할 때의 공부
-              시간을 관리할 수 있습니다. 특히, 휴식 시간을 관리할 때에는 매우
-              유용합니다. 또한, 컴퓨터에 설치할 필요 없이, 웹 브라우저에서 직접
-              접속하여 매우 사용하기 쉽습니다. 온라인 타이머를 사용해 보고 시간
-              관리에 어떻게 도움이 되는지 알아보세요.
-            </div>
+                        <div class="text-center" style="color: white">
+                            온라인 타이머: 시간 관리를 위한 편리한 도구 오늘날의
+                            급변하는 세상에서 시간 관리는 일상 생활의 중요한
+                            측면입니다. 온라인 타이머는 시간을 관리하는 편리하고
+                            효율적인 방법으로, 사용자들은 온라인 타이머를
+                            이용하여, 근무 시간을 관리하거나, 공부할 때의 공부
+                            시간을 관리할 수 있습니다. 특히, 휴식 시간을 관리할
+                            때에는 매우 유용합니다. 또한, 컴퓨터에 설치할 필요
+                            없이, 웹 브라우저에서 직접 접속하여 매우 사용하기
+                            쉽습니다. 온라인 타이머를 사용해 보고 시간 관리에
+                            어떻게 도움이 되는지 알아보세요.
+                        </div>
 
-            <div style="margin-top: 10px">
-              <div class="timerPreset">
-                <a href="?1">1분 타이머</a>
-                <a href="?2">2분 타이머</a>
-                <a href="?3">3분 타이머</a>
-                <a href="?4">4분 타이머</a>
-                <a href="?5">5분 타이머</a>
-              </div>
-              <div class="timerPreset">
-                <a href="?10">10분 타이머</a>
-                <a href="?15">15분 타이머</a>
-                <a href="?25">25분 타이머</a>
-                <a href="?30">30분 타이머</a>
-                <a href="?35">35분 타이머</a>
-              </div>
-              <div class="timerPreset">
-                <a href="?40">40분 타이머</a>
-                <a href="?45">45분 타이머</a>
-                <a href="?50">50분 타이머</a>
-                <a href="?55">55분 타이머</a>
-                <a href="?60">60분 타이머</a>
-              </div>
-            </div>
-          </div>
-          <div class="text-center">
-            <h6 style="text-decoration: underline">
-              contact us : timato@timato.co.kr
-            </h6>
-          </div>
-          <div id="credit" class="text-center">
-            <p>
-              Pen by <a href="https://codepen.io/s-coleman/">Steven Coleman</a>
-            </p>
-            Audio by
-            <a
-              href="http://www.orangefreesounds.com/short-ringtone-for-notification/"
-              >Alexander</a
-            >
-            and
-            <a href="https://kahimyang.com/resources/sound/click.mp3"
-              >The Kahimyang Project</a
-            >
-          </div>
-        </div>
-      </body>
-    </html>
+                        <div style="margin-top: 10px">
+                            <div class="timerPreset">
+                                <a href="?1">1분 타이머</a>
+                                <a href="?2">2분 타이머</a>
+                                <a href="?3">3분 타이머</a>
+                                <a href="?4">4분 타이머</a>
+                                <a href="?5">5분 타이머</a>
+                            </div>
+                            <div class="timerPreset">
+                                <a href="?10">10분 타이머</a>
+                                <a href="?15">15분 타이머</a>
+                                <a href="?25">25분 타이머</a>
+                                <a href="?30">30분 타이머</a>
+                                <a href="?35">35분 타이머</a>
+                            </div>
+                            <div class="timerPreset">
+                                <a href="?40">40분 타이머</a>
+                                <a href="?45">45분 타이머</a>
+                                <a href="?50">50분 타이머</a>
+                                <a href="?55">55분 타이머</a>
+                                <a href="?60">60분 타이머</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h6 style="text-decoration: underline">
+                            contact us : timato@timato.co.kr
+                        </h6>
+                    </div>
+                    <div id="credit" class="text-center">
+                        <p>
+                            Pen by
+                            <a href="https://codepen.io/s-coleman/"
+                                >Steven Coleman</a
+                            >
+                        </p>
+                        Audio by
+                        <a
+                            href="http://www.orangefreesounds.com/short-ringtone-for-notification/"
+                            >Alexander</a
+                        >
+                        and
+                        <a
+                            href="https://kahimyang.com/resources/sound/click.mp3"
+                            >The Kahimyang Project</a
+                        >
+                    </div>
+                    <!-- <div>
+                        <p style="color: white; font-size: 40px">소셜 공유</p>
+                    </div> -->
 
-    <!-- partial -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js"></script>
-    <script src="./script.js"></script>
-  </body>
+                    <ul class="sns">
+                        <li class="facebook">
+                            <a
+                                href="#n"
+                                onclick="fn_sendFB('facebook');return false;"
+                                class="facebook"
+                                target="_self"
+                                title="페이스북 새창열림"
+                                ><img id="naverband" src="./asset/페이스북.png"
+                            /></a>
+                        </li>
+                        <li class="twitter">
+                            <a
+                                href="#n"
+                                onclick="fn_sendFB('twitter');return false;"
+                                class="twitter"
+                                target="_self"
+                                title="트위터 새창열림"
+                                ><img id="naverband" src="./asset/트위터1.png"
+                            /></a>
+                        </li>
+                        <li class="band">
+                            <a
+                                href="#n"
+                                onclick="fn_sendFB('band');return false;"
+                                class="band"
+                                target="_self"
+                                title="네이버밴드 새창열림"
+                            >
+                                <img
+                                    id="naverband"
+                                    src="./asset/네이버밴드.png"
+                            /></a>
+                        </li>
+
+                        <li class="kakaotalk">
+                            <a
+                                href="#n"
+                                id="btnKakao"
+                                onclick="fn_sendFB('kakaotalk');return false;"
+                                class="kakaotalk"
+                                target="_self"
+                                title="카카오톡 새창열림"
+                                ><img id="naverband" src="./asset/카카오톡.png"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+                <br />
+            </body>
+        </html>
+
+        <!-- partial -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js"></script>
+        <script src="./script.js"></script>
+    </body>
 </html>
