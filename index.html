@@ -228,59 +228,6 @@
                     </ul>
                 </div>
                 <br />
-
-                <script>
-                    function fn_sendFB(sns) {
-                        var thisUrl = document.URL;
-                        var snsTitle = 'Timato/타이머 공유';
-                        if (sns == 'facebook') {
-                            var url =
-                                'http://www.facebook.com/sharer/sharer.php?u=' +
-                                encodeURIComponent(thisUrl);
-                            window.open(url, '', 'width=720, height=720');
-                        } else if (sns == 'twitter') {
-                            var url =
-                                'http://twitter.com/share?url=' +
-                                encodeURIComponent(thisUrl) +
-                                '&text=' +
-                                encodeURIComponent(snsTitle);
-                            window.open(
-                                url,
-                                'tweetPop',
-                                'width=720, height=720,scrollbars=yes'
-                            );
-                        } else if (sns == 'band') {
-                            var url =
-                                'http://www.band.us/plugin/share?body=' +
-                                encodeURIComponent(snsTitle) +
-                                '&route=' +
-                                encodeURIComponent(thisUrl);
-                            window.open(
-                                url,
-                                'shareBand',
-                                'width=720, height=720, resizable=yes'
-                            );
-                        } else if (sns == 'kakaotalk') {
-                            Kakao.init('09e8459813c0c5a9d1f7ce9d65847f2b');
-
-                            // 카카오링크 버튼 생성
-                            Kakao.Link.createDefaultButton({
-                                container: '#btnKakao', // HTML에서 작성한 ID값
-                                objectType: 'feed',
-                                content: {
-                                    title: 'Timato/Timer', // 보여질 제목
-                                    description: 'Timato/Timer', // 보여질 설명
-                                    imageUrl: 'https://www.timato.co.kr/', // 콘텐츠 URL
-                                    link: {
-                                        mobileWebUrl:
-                                            'https://www.timato.co.kr/',
-                                        webUrl: 'https://www.timato.co.kr/',
-                                    },
-                                },
-                            });
-                        }
-                    }
-                </script>
             </body>
         </html>
 
